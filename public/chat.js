@@ -74,14 +74,16 @@ socket.on('user:disconnect', (data) => {
 //Auxiliar Functions. - - - - - - - - - - - - - - - 
 function sendChatMessage(){
     if(message.value != ''){
-        socket.emit('chat:message', {
-            username: user.name,
-            user_color: user.chat_color,
-            message: message.value
-        });
-        message.value = ''; 
-    } else if(message.value.length > 150){
-        alert('El mensaje tiene que contener menos de 150 caracteres.');
+        if(message.value.length <= 150){
+            socket.emit('chat:message', {
+                username: user.name,
+                user_color: user.chat_color,
+                message: message.value
+            });
+            message.value = ''; 
+        } else{ 
+            alert('El mensaje tiene que contener menos de 150 caracteres.'); 
+        }
     } else{
         alert('Tienes que introducir un mensaje hijo de puta.');
     }

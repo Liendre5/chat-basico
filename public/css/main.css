@@ -1,0 +1,42 @@
+body {
+    background: #eeeeee !important;
+}
+
+#chat-window{
+    background-color: white;
+    border-radius: 10px;
+    height: 400px;
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+#chat-output p{
+    color:black;
+    padding: 8px 0;
+    margin: 0 20px;
+    display: block;
+}
+
+#actions{
+    color:#d6d6d6;
+    padding: 8px 0;
+    margin: 0 20px;
+    display: block;
+}
+
+#client-username{
+    width: 25%;
+}
+
+#client-username, #client-message{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+#online-users{
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 20%;
+    border: 1px solid black;
+}

@@ -73,7 +73,7 @@ socket.on('user:disconnect', (data) => {
 
 //Auxiliar Functions. - - - - - - - - - - - - - - - 
 function sendChatMessage(){
-    if(message.value != ''){
+    if(message.value != '' || message.value.length <= 150){
         socket.emit('chat:message', {
             username: user.name,
             user_color: user.chat_color,
